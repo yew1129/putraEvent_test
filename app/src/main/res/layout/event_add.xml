@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_event_add.xml -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    tools:context=".event_add">
+
+
+    <EditText
+        android:id="@+id/id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID"/>
+
+    <!-- Title -->
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id"
+        android:hint="Title"/>
+
+    <!-- Date -->
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:hint="Date"/>
+
+    <!-- Start Time -->
+    <EditText
+        android:id="@+id/start_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date"
+        android:hint="Start Time"/>
+
+    <!-- End Time -->
+    <EditText
+        android:id="@+id/end_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/start_time"
+        android:hint="End Time"/>
+
+    <!-- Venue -->
+    <EditText
+        android:id="@+id/venue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/end_time"
+        android:hint="Venue"/>
+
+    <!-- Speaker Count -->
+    <EditText
+        android:id="@+id/speaker_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/venue"
+        android:hint="Speaker Count"/>
+
+    <!-- Speaker Name -->
+    <EditText
+        android:id="@+id/speaker_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/speaker_count"
+        android:hint="Speaker Name"/>
+
+    <!-- Organizer -->
+    <EditText
+        android:id="@+id/organizer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/speaker_name"
+        android:hint="Organizer"/>
+
+    <!-- Description -->
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/organizer"
+        android:hint="Description"/>
+
+    <!-- Seat -->
+    <EditText
+        android:id="@+id/seat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/description"
+        android:hint="Seat"/>
+
+    <!-- Available Seat -->
+    <EditText
+        android:id="@+id/available_seat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/seat"
+        android:hint="Available Seat"/>
+
+
+
+
+    <!-- Submit Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submit_event_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/available_seat"
+        android:text="Submit"/>
+
+</RelativeLayout>
