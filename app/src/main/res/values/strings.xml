@@ -6,4 +6,8 @@
     <string name="submit_btn">Submit</string>
     <string name="view_btn">View</string>
     <string name="forgot_txt">Forgot your Details?</string>
+    <string name="add_image">Add Image</string>
+    <string name="upload_image_test">Upload Image Test</string>
+    <string name="choose_image">Choose Image</string>
+    <string name="upload_image">Upload Image</string>
 </resources>

@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         editTextPassword = findViewById(R.id.password);
         MaterialButton submit_btn = findViewById(R.id.submit_btn);
         MaterialButton view_btn = findViewById(R.id.view_btn);
+        MaterialButton add_image_btn = findViewById(R.id.add_image_btn);
 
         view_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(MainActivity.this, view_event.class);
                 startActivity(intent);
+            }
+        });
+
+        add_image_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this, UploadImage.class);
+                    startActivity(intent);
             }
         });
     }
@@ -78,5 +87,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         );
+    }
+
+    // Show a toast for test
+    public void showToast(View v) {
+        Toast.makeText(MainActivity.this, "This is a toast", Toast.LENGTH_SHORT).show();
     }
 }
