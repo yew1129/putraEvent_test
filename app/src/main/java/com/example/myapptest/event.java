@@ -3,14 +3,16 @@ package com.example.myapptest;
 
 public class event {
 
-    String title, venue, description;
+    String title, venue, description, image;
 
     public event(){}
-    public event(String title, String venue, String description) {
+    public event(String title, String venue, String description, String image) {
         this.title = title;
         this.venue = venue;
         this.description = description;
+        this.image = image;
     }
+
 
     public String getTitle() {
         return title;
@@ -34,5 +36,13 @@ public class event {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getImageUrl() {
+        return image;
+    }
+
+    public void setImageUrl(String image) {
+        this.image = image;
     }
 }
