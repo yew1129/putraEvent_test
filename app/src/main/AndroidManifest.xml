@@ -26,6 +26,7 @@
         </activity>
         <activity android:name=".event_add" />
         <activity android:name=".view_event" />
+        <activity android:name=".view_specific_event" />
     </application>
 
 </manifest>
