@@ -3,16 +3,9 @@ package com.example.myapptest;
 
 public class event {
 
-    String title, venue, description, image;
+    String title, date, description, image;
 
     public event(){}
-    public event(String title, String venue, String description, String image) {
-        this.title = title;
-        this.venue = venue;
-        this.description = description;
-        this.image = image;
-    }
-
 
     public String getTitle() {
         return title;
@@ -22,12 +15,12 @@ public class event {
         this.title = title;
     }
 
-    public String getVenue() {
-        return venue;
+    public String getDate() {
+        return date;
     }
 
-    public void setVenue(String venue) {
-        this.venue = venue;
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getDescription() {
@@ -38,11 +31,30 @@ public class event {
         this.description = description;
     }
 
-    public String getImageUrl() {
+    public String getImage() {
         return image;
     }
 
-    public void setImageUrl(String image) {
+    public void setImage(String image) {
         this.image = image;
     }
+
+//    public String getDes() {
+//        return des;
+//    }
+//
+//    public void setDes(String des) {
+//        this.des = des;
+//    }
+
+    public event(String title, String date, String description, String des, String image) {
+        this.title = title;
+        this.date = date;
+        this.description = description;
+        this.image = image;
+//        this.des =des;
+    }
+
+
+
 }
