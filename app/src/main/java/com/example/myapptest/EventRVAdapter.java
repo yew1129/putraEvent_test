@@ -59,6 +59,7 @@ public class EventRVAdapter extends RecyclerView.Adapter<EventRVAdapter.ViewHold
                 intent.putExtra("eventOrganizer", events.getOrganizer());
                 intent.putExtra("eventStartTime", events.getStart_time());
                 intent.putExtra("eventEndTime", events.getEnd_time());
+                intent.putExtra("eventSeat", events.getSeat());
 
                 // Start the activity
                 context.startActivity(intent);

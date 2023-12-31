@@ -3,13 +3,15 @@ package com.example.myapptest;
 
 public class event {
 
-    String title, venue, date, description, image, speaker_name, organizer, start_time, end_time;
+    String title, venue, date, description, image, speaker_name, organizer, start_time, end_time, seat;
     int id;
 
     public event(){}
 
+
+
     public event(String title, String venue, String date, String description, String image,
-                 String speaker_name, String organizer, String start_time, String end_time, int id) {
+                 String speaker_name, String organizer, String start_time, String end_time, String seat, int id) {
         this.title = title;
         this.venue = venue;
         this.date = date;
@@ -19,6 +21,7 @@ public class event {
         this.organizer = organizer;
         this.start_time = start_time;
         this.end_time = end_time;
+        this.seat = seat;
         this.id = id;
     }
 
@@ -101,5 +104,13 @@ public class event {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getSeat() {
+        return seat;
+    }
+
+    public void setSeat(String seat) {
+        this.seat = seat;
     }
 }
