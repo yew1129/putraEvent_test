@@ -6,4 +6,16 @@
     </style>
 
     <style name="Theme.MyAppTest" parent="Base.Theme.MyAppTest" />
+
+    <!-- New style defined for the time picker -->
+    <style name="TimePickerTheme" parent="ThemeOverlay.MaterialComponents.TimePicker">
+        <!-- Color of the selected option in the picker -->
+        <item name="colorPrimary">@color/pink_dark</item>
+    </style>
+
+    <!-- New style defined for the date picker -->
+    <style name="DatePickerTheme" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <!-- Color of the selected option in the picker -->
+        <item name="colorPrimary">@color/pink_dark</item>
+    </style>
 </resources>

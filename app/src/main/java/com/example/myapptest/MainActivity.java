@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Intent;
 
@@ -14,7 +13,6 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.button.MaterialButton;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.auth.User;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -37,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         MaterialButton submit_btn = findViewById(R.id.submit_btn);
         MaterialButton view_btn = findViewById(R.id.view_btn);
         MaterialButton add_image_btn = findViewById(R.id.add_image_btn);
+        MaterialButton calendar_btn = findViewById(R.id.calendar);
 
         view_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +51,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                     Intent intent = new Intent(MainActivity.this, UploadImage.class);
                     startActivity(intent);
+            }
+        });
+
+        calendar_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, CalendarTest.class);
+                startActivity(intent);
             }
         });
     }

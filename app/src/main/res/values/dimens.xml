@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
 /* //device/apps/common/assets/res/any/dimens.xml
 **
 ** Copyright 2006, The Android Open Source Project
@@ -191,23 +190,24 @@
     <!-- The platform's desired minimum size for a dialog's width when it
          is along the major axis (that is the screen is landscape).  This may
          be either a fraction or a dimension. -->
-    <item type="dimen" name="dialog_min_width_major">65%</item>
+    <item name="dialog_min_width_major" type="dimen">65%</item>
     <!-- The platform's desired fixed width for a dialog along the major axis
          (the screen is in landscape). This may be either a fraction or a dimension.-->
-    <item type="dimen" name="dialog_fixed_width_major">100%</item>
+    <item name="dialog_fixed_width_major" type="dimen">100%</item>
     <!-- The platform's desired fixed width for a dialog along the minor axis
          (the screen is in portrait). This may be either a fraction or a dimension.-->
-    <item type="dimen" name="dialog_fixed_width_minor">100%</item>
+    <item name="dialog_fixed_width_minor" type="dimen">100%</item>
     <!-- The platform's desired fixed height for a dialog along the major axis
          (the screen is in portrait). This may be either a fraction or a dimension.-->
-    <item type="dimen" name="dialog_fixed_height_major">80%</item>
+    <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <!-- The platform's desired fixed height for a dialog along the minor axis
          (the screen is in landscape). This may be either a fraction or a dimension.-->
-    <item type="dimen" name="dialog_fixed_height_minor">100%</item>
+    <item name="dialog_fixed_height_minor" type="dimen">100%</item>
     <!-- Preference activity, vertical padding for the header list -->
     <dimen name="preference_screen_header_vertical_padding">0dp</dimen>
     <dimen name="preference_screen_header_padding_side">16dip</dimen>
-    <integer name="preference_screen_header_scrollbarStyle">0x02000000</integer> <!-- outsideOverlay -->
+    <integer name="preference_screen_header_scrollbarStyle">0x02000000
+    </integer> <!-- outsideOverlay -->
     <integer name="preference_fragment_scrollbarStyle">0x02000000</integer> <!-- outsideOverlay -->
     <dimen name="preference_item_padding_side">8dip</dimen>
     <dimen name="preference_item_padding_inner">8dip</dimen>
@@ -215,7 +215,7 @@
     <!-- The platform's desired minimum size for a dialog's width when it
          is along the minor axis (that is the screen is portrait).  This may
          be either a fraction or a dimension. -->
-    <item type="dimen" name="dialog_min_width_minor">95%</item>
+    <item name="dialog_min_width_minor" type="dimen">95%</item>
     <!-- Default padding for dialogs. -->
     <dimen name="dialog_padding">16dp</dimen>
     <!-- The margin on the start of the content view (accommodates the icon) -->
@@ -525,7 +525,7 @@
     <dimen name="lock_pattern_dot_size_activated">30dp</dimen>
     <!-- How much of the cell space is classified as hit areas [0..1] where 1 means that hit area is
          a circle with diameter equals to cell minimum side min(width, height). -->
-    <item type="dimen" format="float" name="lock_pattern_dot_hit_factor">0.6</item>
+    <item name="lock_pattern_dot_hit_factor" format="float" type="dimen">0.6</item>
     <!-- Width of a gradient applied to a lock pattern line while its disappearing animation. -->
     <dimen name="lock_pattern_fade_away_gradient_width">8dp</dimen>
     <!-- Parameters applied to line disappearing animation in LockPatternView in milliseconds. -->
@@ -536,8 +536,8 @@
     <dimen name="light_y">0dp</dimen>
     <dimen name="light_z">500dp</dimen>
     <dimen name="light_radius">800dp</dimen>
-    <item type="dimen" format="float" name="ambient_shadow_alpha">0.039</item>
-    <item type="dimen" format="float" name="spot_shadow_alpha">0.19</item>
+    <item name="ambient_shadow_alpha" format="float" type="dimen">0.039</item>
+    <item name="spot_shadow_alpha" format="float" type="dimen">0.19</item>
     <!-- Floating toolbar dimensions -->
     <dimen name="floating_toolbar_height">48dp</dimen>
     <dimen name="floating_toolbar_menu_image_width">24dp</dimen>
@@ -562,10 +562,10 @@
     <dimen name="default_magnifier_corner_radius">2dp</dimen>
     <dimen name="default_magnifier_vertical_offset">-42dp</dimen>
     <dimen name="default_magnifier_horizontal_offset">0dp</dimen>
-    <item type="dimen" format="float" name="default_magnifier_zoom">1.25</item>
-    <item type="dimen" name="aerr_padding_list_top">15dp</item>
-    <item type="dimen" name="aerr_padding_list_bottom">8dp</item>
-    <item type="fraction" name="docked_stack_divider_fixed_ratio">34.15%</item>
+    <item name="default_magnifier_zoom" format="float" type="dimen">1.25</item>
+    <item name="aerr_padding_list_top" type="dimen">15dp</item>
+    <item name="aerr_padding_list_bottom" type="dimen">8dp</item>
+    <item name="docked_stack_divider_fixed_ratio" type="fraction">34.15%</item>
     <!-- The default minimal size of a resizable task, in both dimensions. -->
     <dimen name="default_minimal_size_resizable_task">220dp</dimen>
     <!-- Height of a task when in minimized mode from the top when launcher is resizable. -->
@@ -619,7 +619,7 @@
     <!-- The left padding of the left icon -->
     <dimen name="notification_left_icon_start">@dimen/notification_icon_circle_start</dimen>
     <!-- The alpha of a disabled notification button -->
-    <item type="dimen" format="float" name="notification_action_disabled_alpha">0.5</item>
+    <item name="notification_action_disabled_alpha" format="float" type="dimen">0.5</item>
     <!-- The maximum size of Person avatar image in MessagingStyle notifications.
          This is bigger than displayed because listeners can use it for other displays
          e.g. wearables. -->
@@ -661,15 +661,23 @@
     <!-- size of the face pile icons -->
     <dimen name="conversation_face_pile_avatar_size">32dp</dimen>
     <!-- size of the face pile icons when the group is expanded -->
-    <dimen name="conversation_face_pile_avatar_size_group_expanded">@dimen/conversation_face_pile_avatar_size</dimen>
+    <dimen name="conversation_face_pile_avatar_size_group_expanded">
+        @dimen/conversation_face_pile_avatar_size
+    </dimen>
     <!-- amount the badge sticks out from the conversation avatar when the group is expanded -->
-    <dimen name="conversation_badge_protrusion_group_expanded">@dimen/conversation_badge_protrusion</dimen>
+    <dimen name="conversation_badge_protrusion_group_expanded">
+        @dimen/conversation_badge_protrusion
+    </dimen>
     <!-- amount the badge sticks out from the conversation face pile when the group is expanded -->
-    <dimen name="conversation_badge_protrusion_group_expanded_face_pile">@dimen/conversation_badge_protrusion</dimen>
+    <dimen name="conversation_badge_protrusion_group_expanded_face_pile">
+        @dimen/conversation_badge_protrusion
+    </dimen>
     <!-- The width of the protection of the face pile layout-->
     <dimen name="conversation_face_pile_protection_width">2dp</dimen>
     <!-- The width of the protection of the face pile layout when expanded-->
-    <dimen name="conversation_face_pile_protection_width_expanded">@dimen/conversation_face_pile_protection_width</dimen>
+    <dimen name="conversation_face_pile_protection_width_expanded">
+        @dimen/conversation_face_pile_protection_width
+    </dimen>
     <!-- The padding of the expanded message container-->
     <dimen name="expanded_group_conversation_message_padding">32dp</dimen>
     <!-- The stroke width of the ring used to visually mark a conversation as important -->
@@ -826,5 +834,8 @@
     <dimen name="handwriting_bounds_offset_right">10dp</dimen>
     <dimen name="handwriting_bounds_offset_bottom">40dp</dimen>
     <dimen name="_100sdp">100dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="fragment_horizontal_margin">16dp</dimen>
+    <dimen name="fragment_vertical_margin">16dp</dimen>
 
 </resources>

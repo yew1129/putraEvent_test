@@ -10,4 +10,17 @@
     <string name="upload_image_test">Upload Image Test</string>
     <string name="choose_image">Choose Image</string>
     <string name="upload_image">Upload Image</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="test_time_picker">Select time</string>
+    <string name="show_time">No time selected</string>
+    <string name="show_date">No date selected</string>
+    <string name="test_date_picker">Select date</string>
 </resources>

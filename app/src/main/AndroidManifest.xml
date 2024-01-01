@@ -15,6 +15,9 @@
         android:theme="@style/Theme.MyAppTest"
         tools:targetApi="31">
         <activity
+            android:name=".CalendarTest"
+            android:exported="false" />
+        <activity
             android:name=".UploadImage"
             android:exported="false" />
         <activity
