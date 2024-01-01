@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         MaterialButton submit_btn = findViewById(R.id.submit_btn);
         MaterialButton view_btn = findViewById(R.id.view_btn);
         MaterialButton add_image_btn = findViewById(R.id.add_image_btn);
+        MaterialButton test_notification_btn = findViewById(R.id.test_notification_btn);
 
         view_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +53,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                     Intent intent = new Intent(MainActivity.this, UploadImage.class);
                     startActivity(intent);
+            }
+        });
+
+        test_notification_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestNotification.class);
+                startActivity(intent);
             }
         });
     }
