@@ -1,12 +1,12 @@
 package com.example.myapptest;
 
+import android.os.Bundle;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
-
-import android.os.Bundle;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,15 +15,28 @@ import java.util.Map;
 public class register_event extends AppCompatActivity {
 
     private FirebaseFirestore db;
-    private String userId = "208651";
-    private String eventDocumentId = "AfFkEW1e9QPzbrcejK7o";
+    private String userId = "tW6IG391zBUMl1DM7T2D2xBbus33";
+    private String eventDocumentId; // Updated to get the document ID from the intent
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_event);
         db = FirebaseFirestore.getInstance();
-        accessSpecificEventAndStoreUserId();
+
+        // Retrieve the event document ID from the intent
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            eventDocumentId = extras.getString("eventDocumentId");
+        }
+
+        if (eventDocumentId != null) {
+            accessSpecificEventAndStoreUserId();
+        } else {
+            // Handle the case where the eventDocumentId is not provided
+            Toast.makeText(register_event.this, "Event document ID not provided", Toast.LENGTH_SHORT).show();
+            finish(); // Close the activity if the document ID is not available
+        }
     }
 
     private void updateFirestoreArray(DocumentReference docRef, String arrayName, String itemId, String successMessage) {
@@ -53,7 +66,6 @@ public class register_event extends AppCompatActivity {
 
     private void accessSpecificEventAndStoreUserId() {
         // Go to specific event document to store participant ID
-
         DocumentReference eventRef = db.collection("event").document(eventDocumentId);
 
         eventRef.get().addOnSuccessListener(documentSnapshot -> {
@@ -104,6 +116,4 @@ public class register_event extends AppCompatActivity {
             updateFirestoreArray(registerRef, "event_register", eventDocumentId, "User ID added to event_register");
         });
     }
-
-
 }

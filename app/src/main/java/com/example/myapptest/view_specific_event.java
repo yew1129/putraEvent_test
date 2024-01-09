@@ -1,32 +1,29 @@
 package com.example.myapptest;
 
-import android.os.Bundle;
 import android.content.Intent;
+import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.ebanx.swipebtn.OnStateChangeListener;
 import com.ebanx.swipebtn.SwipeButton;
-
-import androidx.appcompat.app.AppCompatActivity;
 import com.squareup.picasso.Picasso;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 public class view_specific_event extends AppCompatActivity {
+
+    private String eventDocumentId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_specific_event);
 
-        SwipeButton swipeButton = findViewById(R.id.swipe_btn_reg);
-        swipeButton.setOnStateChangeListener(new OnStateChangeListener() {
-            @Override
-            public void onStateChange(boolean active){
-                startActivity(new Intent(view_specific_event.this, register_event.class));
-            }
-        });
-
-        // Retrieve data from the intent
+        // Retrieve data from the intent, including the document ID
         Intent intent = getIntent();
+        eventDocumentId = intent.getStringExtra("eventDocumentId");
         String eventTitle = intent.getStringExtra("eventTitle");
         String eventDate = intent.getStringExtra("eventDate");
         String eventStartTime = intent.getStringExtra("eventStartTime");
@@ -62,5 +59,21 @@ public class view_specific_event extends AppCompatActivity {
         seatTextView.setText(eventSeat);
 
         Picasso.get().load(eventImageUrl).into(imageView);
+
+        // Set up the SwipeButton to handle registration
+        SwipeButton swipeButton = findViewById(R.id.swipe_btn_reg);
+        swipeButton.setOnStateChangeListener(new OnStateChangeListener() {
+            @Override
+            public void onStateChange(boolean active) {
+                // Display a message or perform additional actions before registration
+                Toast.makeText(view_specific_event.this, "Swipe button clicked", Toast.LENGTH_SHORT).show();
+
+                // Optionally, you can start the registration process here
+                // Start the register_event activity and pass the document ID
+                Intent registerIntent = new Intent(view_specific_event.this, register_event.class);
+                registerIntent.putExtra("eventDocumentId", eventDocumentId);
+                startActivity(registerIntent);
+            }
+        });
     }
 }

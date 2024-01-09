@@ -1,8 +1,8 @@
 package com.example.myapptest;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
+import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -19,11 +19,22 @@ public class EventRVAdapter extends RecyclerView.Adapter<EventRVAdapter.ViewHold
 
     private ArrayList<event> eventArrayList;
     private Context context;
+    private OnItemClickListener onItemClickListener; // Add this member variable
 
+    // Constructor
     public EventRVAdapter(ArrayList<event> eventArrayList, Context context) {
         this.eventArrayList = eventArrayList;
         this.context = context;
+    }
 
+    // Interface to handle item click events
+    public interface OnItemClickListener {
+        void onItemClick(int position, View view);
+    }
+
+    // Method to set the click listener
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.onItemClickListener = listener;
     }
 
     @NonNull
@@ -44,26 +55,10 @@ public class EventRVAdapter extends RecyclerView.Adapter<EventRVAdapter.ViewHold
                 .load(imageUrl)
                 .into(holder.eventImageView);
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Handle the click event, navigate to another page
-                Intent intent = new Intent(context, view_specific_event.class);
-
-                // Pass the extracted data into view_specific_event
-                intent.putExtra("eventTitle", events.getTitle());
-                intent.putExtra("eventDate", events.getDate());
-                intent.putExtra("eventDescription", events.getDescription());
-                intent.putExtra("eventImageUrl", events.getImage());
-                intent.putExtra("eventVenue", events.getVenue());
-                intent.putExtra("eventSpeaker", events.getSpeaker_name());
-                intent.putExtra("eventOrganizer", events.getOrganizer());
-                intent.putExtra("eventStartTime", events.getStart_time());
-                intent.putExtra("eventEndTime", events.getEnd_time());
-                intent.putExtra("eventSeat", events.getSeat());
-
-                // Start the activity
-                context.startActivity(intent);
+        // Set click listener on the item view
+        holder.itemView.setOnClickListener(v -> {
+            if (onItemClickListener != null) {
+                onItemClickListener.onItemClick(position, v);
             }
         });
     }
