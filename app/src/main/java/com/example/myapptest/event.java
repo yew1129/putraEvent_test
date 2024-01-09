@@ -1,17 +1,14 @@
-// File: Event.java
 package com.example.myapptest;
 
 public class event {
 
-    String title, venue, date, description, image, speaker_name, organizer, start_time, end_time, seat;
-    int id;
+    String id, title, venue, date, description, image, speaker_name, organizer, start_time, end_time;
+    int seat;
 
     public event(){}
 
-
-
-    public event(String title, String venue, String date, String description, String image,
-                 String speaker_name, String organizer, String start_time, String end_time, String seat, int id) {
+    public event(String id, String title, String venue, String date, String description, String image,
+                 String speaker_name, String organizer, String start_time, String end_time, int seat) {
         this.title = title;
         this.venue = venue;
         this.date = date;
@@ -98,19 +95,19 @@ public class event {
         this.end_time = end_time;
     }
 
-    public int getId() {
-        return id;
-    }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getSeat() {
+    public int getSeat() {
         return seat;
     }
 
-    public void setSeat(String seat) {
+    public void setSeat(int seat) {
         this.seat = seat;
+    }
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

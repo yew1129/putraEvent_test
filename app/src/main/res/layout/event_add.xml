@@ -10,18 +10,17 @@
     tools:context=".event_add">
 
 
-    <EditText
-        android:id="@+id/id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="ID"/>
+<!--    <EditText-->
+<!--        android:id="@+id/id"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="ID"/>-->
 
     <!-- Title -->
     <EditText
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/id"
         android:hint="Title"/>
 
     <!-- Date -->
@@ -57,19 +56,19 @@
         android:hint="Venue"/>
 
     <!-- Speaker Count -->
-    <EditText
-        android:id="@+id/speaker_count"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/venue"
-        android:hint="Speaker Count"/>
+<!--    <EditText-->
+<!--        android:id="@+id/speaker_count"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/venue"-->
+<!--        android:hint="Speaker Count"/>-->
 
     <!-- Speaker Name -->
     <EditText
         android:id="@+id/speaker_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/speaker_count"
+        android:layout_below="@id/venue"
         android:hint="Speaker Name"/>
 
     <!-- Organizer -->
@@ -96,13 +95,13 @@
         android:layout_below="@id/description"
         android:hint="Seat"/>
 
-    <!-- Available Seat -->
-    <EditText
-        android:id="@+id/available_seat"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/seat"
-        android:hint="Available Seat"/>
+<!--    &lt;!&ndash; Available Seat &ndash;&gt;-->
+<!--    <EditText-->
+<!--        android:id="@+id/available_seat"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/seat"-->
+<!--        android:hint="Available Seat"/>-->
 
 
 
@@ -112,7 +111,7 @@
         android:id="@+id/submit_event_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/available_seat"
+        android:layout_below="@id/seat"
         android:text="Submit"/>
 
 </RelativeLayout>

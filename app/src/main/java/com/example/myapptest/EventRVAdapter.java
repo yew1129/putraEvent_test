@@ -23,6 +23,7 @@ public class EventRVAdapter extends RecyclerView.Adapter<EventRVAdapter.ViewHold
     public EventRVAdapter(ArrayList<event> eventArrayList, Context context) {
         this.eventArrayList = eventArrayList;
         this.context = context;
+
     }
 
     @NonNull
