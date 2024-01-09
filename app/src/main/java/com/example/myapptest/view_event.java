@@ -57,7 +57,10 @@ public class view_event extends AppCompatActivity {
                         // Set click listener for each item in the RecyclerView
                         eventRVAdapter.setOnItemClickListener((position, v) -> {
                             // Retrieve the document ID of the clicked event
+                            Intent intent = new Intent(view_event.this, view_specific_event.class);
                             String selectedEventDocumentId = list.get(position).getId();
+                            intent.putExtra("eventDocumentId", selectedEventDocumentId);
+
                             // Call the method to handle the click event
                             onEventClick(selectedEventDocumentId);
                         });
@@ -72,7 +75,7 @@ public class view_event extends AppCompatActivity {
     // Method to handle the click event on a specific event
     private void onEventClick(String selectedEventDocumentId) {
         // Intent to navigate to the register_event activity
-        Intent intent = new Intent(view_event.this, register_event.class);
+        Intent intent = new Intent(view_event.this, view_specific_event.class);
         // Pass the selected event's document ID to the register_event activity
         intent.putExtra("eventDocumentId", selectedEventDocumentId);
         // Start the register_event activity

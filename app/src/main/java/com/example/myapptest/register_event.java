@@ -15,7 +15,7 @@ import java.util.Map;
 public class register_event extends AppCompatActivity {
 
     private FirebaseFirestore db;
-    private String userId = "tW6IG391zBUMl1DM7T2D2xBbus33";
+    private String userId = "39dCqnWGnjWDaPKGEww0enR1jwW2";
     private String eventDocumentId; // Updated to get the document ID from the intent
 
     @Override
