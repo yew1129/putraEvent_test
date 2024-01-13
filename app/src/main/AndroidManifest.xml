@@ -17,9 +17,9 @@
         android:theme="@style/Theme.MyAppTest"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-        <activity
-            android:name=".register_event"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".register_event"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".MainActivity"
             android:exported="true">
