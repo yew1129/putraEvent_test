@@ -124,13 +124,13 @@ public class view_specific_event extends AppCompatActivity {
                         Map<String, Object> updateData = new HashMap<>();
                         updateData.put("user_register", userRegister);
 
-                        eventRef.update(updateData)
-                                .addOnSuccessListener(aVoid -> {
-                                    Toast.makeText(view_specific_event.this, "User ID added to user_register", Toast.LENGTH_SHORT).show();
-                                })
-                                .addOnFailureListener(e -> {
-                                    Toast.makeText(view_specific_event.this, "Failed to update user_register", Toast.LENGTH_SHORT).show();
-                                });
+//                        eventRef.update(updateData)
+//                                .addOnSuccessListener(aVoid -> {
+//                                    Toast.makeText(view_specific_event.this, "User ID added to user_register", Toast.LENGTH_SHORT).show();
+//                                })
+//                                .addOnFailureListener(e -> {
+//                                    Toast.makeText(view_specific_event.this, "Failed to update user_register", Toast.LENGTH_SHORT).show();
+//                                });
                     DocumentReference registerRef = db.collection("users").document(userId);
                     updateFirestoreArray(registerRef, "event_register", eventDocumentId, "User ID added to event_register");
                 } else {
